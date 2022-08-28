@@ -6,5 +6,5 @@
 Console.WriteLine("Здравствуйте, я помогу определить последнюю цифру любого числа ");
 Console.Write("Введите число: ");
 int NumberN = Convert.ToInt32(Console.ReadLine());
-int LastNumber = NumberN - (NumberN/10)*10;
+int LastNumber = NumberN - ( NumberN/10 )*10;
 Console.WriteLine("Получилось " + LastNumber);    
