@@ -12,10 +12,10 @@ while(index < numberN+1)
     if (index % 2 == 0)
     {
         if (index == numberN)
-        {Console.Write(index);
+        {Console.Write( index );
         }
         else
-        {Console.Write(index + ", ");}
+        {Console.Write( index + ", " );}
         
         index++;
     }
