@@ -15,6 +15,6 @@ while(index < numberN+1)
     }
     else
     {
-        Console.Write(index + ", ");} 
+        Console.Write( index + ", " );} 
     index++;  
 }
