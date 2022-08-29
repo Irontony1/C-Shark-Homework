@@ -2,69 +2,74 @@
 //Найти сумму и произведение 2 рандомизированных массива (все значения должны быть случайными) 
 //Обязательное условие оба массива одинаковы по размеру иначе упадете в ошибку ))
 
-Console.WriteLine("Здравствуйте, попробуем сложить два массива");
-int[] arrayA = new int[5];
-int[] arrayB = new int[5];
-Console.Write(FillArray(arrayA, "Первый"));
-
 void FillArray(int[] array, string number)
 {   
-    int len = array.Length;
-    int index = 0;
-    while (index<len+1)
+    int size = array.Length;
+    for (int i = 0; i < size; i++ )
     {
-        array[index] = new Random().Next(1,10);
-        if (index == 0)
-            Console.WriteLine(number+" массив выглядит так [ "+index+" , ");
-        else if (index >= 1 && index >= len-1)
-            Console.WriteLine(index+" , ");
-        else if (index == len)
-            Console.WriteLine(index+" ]");
-        index++;
+        array[i] = new Random().Next(1,10);
+        if (i == 0)
+            Console.Write(number + " массив выглядит так [ " + array[i] + " , ");
+        else if (i >= 1 && i <= size-2)
+            Console.Write( array[i] + " , ");
+        else if (i == size-1)
+            Console.Write( array[i] + " ]");
     }
+    Console.WriteLine();
     
 }
 
-int[] SumArray(int[] arrayA, int[] arrayB)
+void SumArray(int[] arrayA, int[] arrayB)
 {
-    int lenA = arrayA.Length;
-    int lenB = arrayB.Length;
-    int[] sumarray = new int[lenA];
-    if (lenA ==lenB)
+    int sizeA = arrayA.Length;
+    int sizeB = arrayB.Length;
+    int[] sumArray = new int[sizeA];
+    if (sizeA == sizeB)
     {
-        int index = 0;
-        while (index<lenA+1)
+        for ( int i = 0; i < sizeA; i++)
         {
-            sumarray[index] = arrayA[index] + arrayB[index];
-            index++;
+            sumArray[i] = arrayA[i] + arrayB[i];
+            if (i == 0)
+                Console.Write("Сумма массивов выглядит так [ " + sumArray[i] + " , ");
+            else if (i >= 1 && i <= sizeA-2)
+                Console.Write( sumArray[i] + " , ");
+            else if (i == sizeA-1)
+                Console.Write( sumArray[i] + " ]");
         }
-        return sumarray;
     }
     else
-    {
         Console.WriteLine("Массивы имеют разный размер");
-        return arrayA;
-    }
+    
+    Console.WriteLine();
 }
 
-int[] MulArray(int[] arrayA, int[] arrayB)
+void MulArray(int[] arrayA, int[] arrayB)
 {
-    int lenA = arrayA.Length;
-    int lenB = arrayB.Length;
-    int[] mularray = new int[lenA];
-    if (lenA ==lenB)
+    int sizeA = arrayA.Length;
+    int sizeB = arrayB.Length;
+    int[] mulArray = new int[sizeA];
+    if (sizeA == sizeB)
     {
-        int index = 0;
-        while (index<lenA+1)
+        for ( int i = 0; i < sizeA; i++)
         {
-            mularray[index] = arrayA[index] * arrayB[index];
-            index++;
+            mulArray[i] = arrayA[i] * arrayB[i];
+                if (i == 0)
+            Console.Write("Произведение массивов выглядит так [ " + mulArray[i] + " , ");
+                else if (i >= 1 && i <= sizeA-2)
+            Console.Write( mulArray[i] + " , ");
+                else if (i == sizeA-1)
+            Console.Write( mulArray[i] + " ]");
         }
-        return mularray;
     }
     else
-    {
         Console.WriteLine("Массивы имеют разный размер");
-        return arrayA;
-    }
+    Console.WriteLine();
 }
+
+Console.WriteLine("Здравствуйте, попробуем сложить два массива");
+int[] arrayA = new int[5];
+int[] arrayB = new int[5];
+FillArray(arrayA, "Первый");
+FillArray(arrayB, "Второй");
+SumArray(arrayA,arrayB);
+MulArray(arrayA,arrayB);
