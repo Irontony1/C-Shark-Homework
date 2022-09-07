@@ -33,7 +33,7 @@ void CheckPointIntersection (int[,] array)   // Метод определени�
     double b2 = array[1,0];
     double k2 = array[1,1];
     double[] arrayPoint = new double[2];
-    if (k1 == k2)
+    if (k1 == k2 || b1 == b2)
     {
         Console.WriteLine("Прямые не имею точки пересечения. Они параллельны!");
     }
