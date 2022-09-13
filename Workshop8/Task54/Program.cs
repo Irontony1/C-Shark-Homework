@@ -53,15 +53,15 @@ void PrintArray(int[,] array)
 
 int[,] matrixA = new int[,] 
 {
-    {3,5,4},
-    {6,2,5},
-    {3,1,4},
+    {2,4,7},
+    {3,2,1},
+    {2,5,9},
 };
 int[,] matrixB = new int[,] 
 {
-    {1,9,5},
-    {2,3,6},
-    {2,3,7},
+    {3,4,1},
+    {3,3,2},
+    {1,2,3},
 };
 Console.WriteLine("Умножим матрицу A и B (A * B)");
 Console.WriteLine("Матрица А выглядит так: ");
